@@ -8,6 +8,7 @@ public class MuscleMateApplication {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World");
+
 		SpringApplication.run(MuscleMateApplication.class, args);
 	}
 
