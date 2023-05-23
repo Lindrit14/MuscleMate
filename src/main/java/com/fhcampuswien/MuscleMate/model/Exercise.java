@@ -13,20 +13,21 @@ public class Exercise {
     private String type;
 
     private String muscle;
-
+    private String equipment;
     private String difficulty;
 
-    private Integer offset;
+    private String instructions;
 
 
     //Constructors
-    public Exercise(Integer id, String name, String type, String muscle, String difficulty, Integer offset) {
+    public Exercise(Integer id, String name, String type, String muscle, String difficulty, String equipment, String instructions ) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.muscle = muscle;
+        this.equipment = equipment;
         this.difficulty = difficulty;
-        this.offset = offset;
+        this.instructions = instructions;
     }
 
     public Exercise() {
@@ -53,8 +54,12 @@ public class Exercise {
         return difficulty;
     }
 
-    public Integer getOffset() {
-        return offset;
+    public String getEquipment() {
+        return equipment;
+    }
+
+    public String getInstructions() {
+        return instructions;
     }
 
     //Setters
@@ -78,25 +83,26 @@ public class Exercise {
         this.difficulty = difficulty;
     }
 
-    public void setOffset(Integer offset) {
-        this.offset = offset;
+    public void setEquipment(String equipment) {
+        this.equipment = equipment;
     }
 
-    //equals
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Exercise exercise = (Exercise) o;
-        return Objects.equals(id, exercise.id) && Objects.equals(name, exercise.name) && Objects.equals(type, exercise.type) && Objects.equals(muscle, exercise.muscle) && Objects.equals(difficulty, exercise.difficulty) && Objects.equals(offset, exercise.offset);
+        return Objects.equals(id, exercise.id) && Objects.equals(name, exercise.name) && Objects.equals(type, exercise.type) && Objects.equals(muscle, exercise.muscle) && Objects.equals(equipment, exercise.equipment) && Objects.equals(difficulty, exercise.difficulty) && Objects.equals(instructions, exercise.instructions);
     }
 
-    //hashCode
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, type, muscle, difficulty, offset);
+        return Objects.hash(id, name, type, muscle, equipment, difficulty, instructions);
     }
-
 
     @Override
     public String toString() {
@@ -105,8 +111,8 @@ public class Exercise {
                 ", name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", muscle='" + muscle + '\'' +
+                ", equipment='" + equipment + '\'' +
                 ", difficulty='" + difficulty + '\'' +
-                ", offset=" + offset +
                 '}';
     }
 }
