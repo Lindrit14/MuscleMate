@@ -1,6 +1,6 @@
 package com.fhcampuswien.MuscleMate.model;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 
 import java.util.Objects;
 public class Exercise {
