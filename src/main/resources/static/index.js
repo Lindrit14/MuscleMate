@@ -48,6 +48,6 @@ window.onload = function () {
 
     }
 
-    xhr.open("GET", "/api/exercise");
+    xhr.open("GET", "/api/exercise/get-all-exercises");
     xhr.send();
 }
