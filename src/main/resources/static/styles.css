@@ -114,3 +114,9 @@ button:hover {
     background-color: #ff8c00;
     color: #fff;
 }
+
+.imgContainer{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
